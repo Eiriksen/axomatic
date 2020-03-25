@@ -2,7 +2,7 @@
 % Please edit documentation in R/script - Axomatic.r
 \name{axomatic}
 \alias{axomatic}
-\title{Axomatix}
+\title{Axomatic}
 \usage{
 axomatic(x, y, ratio = 1, scaleSize = T)
 }
@@ -13,14 +13,15 @@ axomatic(x, y, ratio = 1, scaleSize = T)
 
 \item{ratio}{the ratio between the x and y axis. Defaults to 1 (a square)}
 
-\item{scaleSize}{if the ratio is for physical graph size (T, default) or the va}
+\item{scaleSize}{if the ratio is for physical graph size (T, default) or the values displayed. If physical (T), setting ration to 1 will always result in a square graph. If not physical (F), setting ration to 1 will give equal scale on both axes.}
 }
 \description{
-Used to make defining x axis, y axis, and plot shape (square, rectangular, etc)
+Used for defining x axis, y axis, and plot shape (square, rectangular, etc)
 It uses functions axis_x() and axis_y() to make two axes, and then lets the user specify
 the shape of the plot.
 The function is used and added as a ggplot object.
+See help page for axis_x() and axis_y().
 }
 \examples{
-axomatic(x_axis(0,20),y_axis(1000, 10000))
+axomatic(x_axis(from=0,to=20,ticks=5,labels=1),y_axis(1000, 10000, 100, 2))
 }
