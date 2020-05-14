@@ -135,3 +135,8 @@ axis_y = function(from, to, ticks=1, labels=1, pad=0, upperPad=NA, lowerPad=NA)
 {
   return(aximaticultimatic("y",from,to,ticks,labels,pad,upperPad,lowerPad))
 }
+
+seq_minors=function(from, to, step, majors) {
+  sequence = seq(from, to, step)
+  return( every_nth(sequence,majors))
+}
