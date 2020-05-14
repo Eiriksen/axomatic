@@ -140,3 +140,26 @@ seq_minors=function(from, to, step, majors) {
   sequence = seq(from, to, step)
   return( every_nth(sequence,majors))
 }
+
+every_nth <- function(x, nth, empty = TRUE, inverse = TRUE) {
+  # Source: User Maninal at Stackoverflow
+  if (!inverse) {
+    if(empty) {
+      x[1:nth == 1] <- ""
+      x
+    }
+    else {
+      x[1:nth != 1]
+    }
+  }
+  else {
+    if(empty) {
+      x[1:nth != 1] <- ""
+      x
+    }
+    else {
+      x[1:nth == 1]
+    }
+  }
+}
+
