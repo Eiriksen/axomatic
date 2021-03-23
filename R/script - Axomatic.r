@@ -103,7 +103,6 @@ base_axis = function(xy, from, to, ticks=1, labels=1, pad=0, upperPad=NA, lowerP
 #' axis_x
 #'
 #' Simplified function for defining the x axis with settings for tickmarks and labels.
-#' This function is a slight simplification of the base_axis() function: It only works for the x axis.
 #' The function is used as a ggplot object.
 #' @param from Start of the axis.
 #' @param to End of the axis.
@@ -123,7 +122,6 @@ axis_x = function(from, to, ticks=1, labels=1, pad=0, upperPad=NA, lowerPad=NA, 
 #' axis_y
 #'
 #' Simplified function for defining the y axis with settings for tickmarks and labels.
-#' This function is a slight simplification of the [base_axis()] function: It only works for the y axis.
 #' The function is used as a ggplot object.
 #' @param from Start of the axis.
 #' @param to End of the axis.

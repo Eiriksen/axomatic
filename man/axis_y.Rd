@@ -34,7 +34,6 @@ axis_y(
 }
 \description{
 Simplified function for defining the y axis with settings for tickmarks and labels.
-This function is a slight simplification of the [base_axis()] function: It only works for the y axis.
 The function is used as a ggplot object.
 }
 \examples{

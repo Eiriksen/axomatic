@@ -34,7 +34,6 @@ axis_x(
 }
 \description{
 Simplified function for defining the x axis with settings for tickmarks and labels.
-This function is a slight simplification of the base_axis() function: It only works for the x axis.
 The function is used as a ggplot object.
 }
 \examples{
