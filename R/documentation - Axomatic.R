@@ -1,4 +1,4 @@
-#' Axomatic, a set of functions for simple and easily controlled axes in ggplot
+#' Axomatic, a set of functions for simplifying axis-editing in ggplot
 #'
 #' @docType package
 #' @name Axomatic
