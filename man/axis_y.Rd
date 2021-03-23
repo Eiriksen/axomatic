@@ -4,7 +4,16 @@
 \alias{axis_y}
 \title{axis_y}
 \usage{
-axis_y(from, to, ticks = 1, labels = 1, pad = 0, upperPad = NA, lowerPad = NA)
+axis_y(
+  from,
+  to,
+  ticks = 1,
+  labels = 1,
+  pad = 0,
+  upperPad = NA,
+  lowerPad = NA,
+  trans_labels = "none"
+)
 }
 \arguments{
 \item{from}{Start of the axis.}
@@ -20,10 +29,12 @@ axis_y(from, to, ticks = 1, labels = 1, pad = 0, upperPad = NA, lowerPad = NA)
 \item{upperPad}{specification of pad, but only for space after the last mark.}
 
 \item{lowerPad}{specifiction of pad, but only for spcae before the first mark.}
+
+\item{trans_labels}{"none": Does nothing (default). Lognatural: Transforms numerical labels back to non-logarithmic form if the axis data is log transformed}
 }
 \description{
 Simplified function for defining the y axis with settings for tickmarks and labels.
-This function is a slight simplification of the [aximaticultimatic()] function: It only works for the y axis.
+This function is a slight simplification of the [base_axis()] function: It only works for the y axis.
 The function is used as a ggplot object.
 }
 \examples{

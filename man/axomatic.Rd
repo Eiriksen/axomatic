@@ -7,9 +7,9 @@
 axomatic(x, y, ratio = 1, scaleSize = T)
 }
 \arguments{
-\item{x}{an x-axis specified with the function axis_x (or aximaticultimatic())}
+\item{x}{an x-axis specified with the function axis_x}
 
-\item{y}{an y-axis specified with the function axis_y (or aximaticultimatic())}
+\item{y}{an y-axis specified with the function axis_y}
 
 \item{ratio}{the ratio between the x and y axis. Defaults to 1 (a square)}
 
