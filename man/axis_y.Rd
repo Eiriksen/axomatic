@@ -12,6 +12,7 @@ axis_y(
   pad = 0,
   upperPad = NA,
   lowerPad = NA,
+  trans = "identity",
   trans_labels = "none"
 )
 }

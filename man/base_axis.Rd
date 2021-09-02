@@ -13,6 +13,7 @@ base_axis(
   pad = 0,
   upperPad = NA,
   lowerPad = NA,
+  trans = "identity",
   trans_labels = "none"
 )
 }
