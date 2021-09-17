@@ -174,3 +174,8 @@ every_nth <- function(x, nth, empty = TRUE, inverse = TRUE) {
   }
 }
 
+#' Converts anything to a numeric
+numextract <- function(string){
+  require(stringr)
+  as.numeric(str_extract(string, "\\-*\\d+\\.*\\d*"))
+}
