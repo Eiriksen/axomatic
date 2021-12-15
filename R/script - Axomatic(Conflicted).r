@@ -40,16 +40,12 @@ axomatic = function(x, y, ratio=1, scaleSize=T ){
 #' @param lowerPad specifiction of pad, but only for spcae before the first mark.
 #' @param trans_labels "none": Does nothing (default). Lognatural: Transforms numerical labels back to non-logarithmic form if the axis data is log transformed
 #' @examples axis_x(from=0, to=20, ticks=1, labels=5, pad=2) #makes an axis going from 0 to 20, with 20 tickmarks, and labels every 5th tickmark, and a space of 2 before and after te marks
-base_axis = function(xy, from, to, ticks=1, labels=1, pad=0, upperPad=NA, lowerPad=NA, expand=0, upperExp=NA, lowerExp=NA, trans="identity",trans_labels="none")
+base_axis = function(xy, from, to, ticks=1, labels=1, pad=0, upperPad=NA, lowerPad=NA,trans="identity",trans_labels="none")
 {
 
-  # From hereon we only use upperPad and lowerPad, but let pad owerwrite these if they're unspecified
+# From hereon we only use upperPad and lowerPad, but let pad owerwrite these if they're unspecified
   if (is.na(upperPad)) upperPad = pad
   if (is.na(lowerPad)) lowerPad = pad
-
-  # From hereon we only use upperPad and lowerPad, but let pad owerwrite these if they're unspecified
-  if (is.na(upperExp)) upperExp = expand
-  if (is.na(lowerExp)) lowerExp = expand
 
   # What will be the upper and lower limits of the plot window
   upperLim=upperPad+to
@@ -105,9 +101,9 @@ base_axis = function(xy, from, to, ticks=1, labels=1, pad=0, upperPad=NA, lowerP
 
   #Depending on whether this is an x axis or y axis:
   if (xy == "x")
-    return(scale_x_continuous(breaks=v_breaks, labels=v_labels, limits=c(lowerLim,upperLim), trans=trans, expand=c(lowerExp,upperExp)))
+    return(scale_x_continuous(breaks=v_breaks, labels=v_labels, limits=c(lowerLim,upperLim), trans=trans))
   else
-    return(scale_y_continuous(breaks=v_breaks, labels=v_labels, limits=c(lowerLim,upperLim), trans=trans, expand=c(lowerExp,upperExp)))
+    return(scale_y_continuous(breaks=v_breaks, labels=v_labels, limits=c(lowerLim,upperLim), trans=trans))
 }
 
 
@@ -126,9 +122,9 @@ base_axis = function(xy, from, to, ticks=1, labels=1, pad=0, upperPad=NA, lowerP
 #' @param trans_labels "none": Does nothing (default). Lognatural: Transforms numerical labels back to non-logarithmic form if the axis data is log transformed
 #' @export
 #' @examples axis_x(from=0, to=20, ticks=1, labels=5, pad=2) #makes an axis going from 0 to 20, with 20 tickmarks, and labels every 5th tickmark, and a space of 2 before and after te marks
-axis_x = function(from, to, ticks=1, labels=1, pad=0, upperPad=NA, lowerPad=NA, expand=0, upperExp=NA, lowerExp=NA, trans="identity", trans_labels="none")
+axis_x = function(from, to, ticks=1, labels=1, pad=0, upperPad=NA, lowerPad=NA,trans="identity", trans_labels="none")
 {
-  return(base_axis("x",from,to,ticks,labels,pad,upperPad,lowerPad,expand,upperExp,lowerExp,trans,trans_labels))
+  return(base_axis("x",from,to,ticks,labels,pad,upperPad,lowerPad,trans,trans_labels))
 }
 
 #' axis_y
@@ -145,9 +141,9 @@ axis_x = function(from, to, ticks=1, labels=1, pad=0, upperPad=NA, lowerPad=NA, 
 #' @param trans_labels "none": Does nothing (default). Lognatural: Transforms numerical labels back to non-logarithmic form if the axis data is log transformed
 #' @export
 #' @examples axis_y(from=0, to=20, ticks=1, labels=5, pad=2) #makes an axis going from 0 to 20, with 20 tickmarks, and labels every 5th tickmark, and a space of 2 before and after te marks.
-axis_y = function(from, to, ticks=1, labels=1, pad=0, upperPad=NA, lowerPad=NA, expand=0, upperExp=NA, lowerExp=NA, trans="identity", trans_labels="none")
+axis_y = function(from, to, ticks=1, labels=1, pad=0, upperPad=NA, lowerPad=NA, trans="identity", trans_labels="none")
 {
-  return(base_axis("y",from,to,ticks,labels,pad,upperPad,lowerPad,expand,upperExp,lowerExp,trans,trans_labels))
+  return(base_axis("y",from,to,ticks,labels,pad,upperPad,lowerPad,trans,trans_labels))
 }
 
 seq_minors=function(from, to, step, majors) {
